@@ -1,0 +1,622 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/baryshev/look#readme">look (v0.1.3)</a>
+</h1>
+<h4>Performance profiler based on nodetime</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.look">module look</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.look.agent">
+            function <span class="apidocSignatureSpan">look.</span>agent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.look.receiver">
+            function <span class="apidocSignatureSpan">look.</span>receiver
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.look.start">
+            function <span class="apidocSignatureSpan">look.</span>start
+            <span class="apidocSignatureSpan">(port, host)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">look.</span>agent.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">look.</span>receiver.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.look.agent">module look.agent</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.look.agent.agent">
+            function <span class="apidocSignatureSpan">look.</span>agent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.look.agent.super_">
+            function <span class="apidocSignatureSpan">look.agent.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.look.agent.prototype">module look.agent.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.look.agent.prototype.request">
+            function <span class="apidocSignatureSpan">look.agent.prototype.</span>request
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.look.agent.prototype.send">
+            function <span class="apidocSignatureSpan">look.agent.prototype.</span>send
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.look.receiver">module look.receiver</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.look.receiver.receiver">
+            function <span class="apidocSignatureSpan">look.</span>receiver
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.look.receiver.super_">
+            function <span class="apidocSignatureSpan">look.receiver.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.look.receiver.prototype">module look.receiver.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.look.receiver.prototype.addSocket">
+            function <span class="apidocSignatureSpan">look.receiver.prototype.</span>addSocket
+            <span class="apidocSignatureSpan">(socket)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.look.receiver.prototype.send">
+            function <span class="apidocSignatureSpan">look.receiver.prototype.</span>send
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.look.start">module look.start</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.look.start.start">
+            function <span class="apidocSignatureSpan">look.</span>start
+            <span class="apidocSignatureSpan">(port, host)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.look" id="apidoc.module.look">module look</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.look.agent" id="apidoc.element.look.agent">
+        function <span class="apidocSignatureSpan">look.</span>agent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">agent = function () {
+	events.EventEmitter.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.look.receiver" id="apidoc.element.look.receiver">
+        function <span class="apidocSignatureSpan">look.</span>receiver
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">receiver = function () {
+	events.EventEmitter.call(this);
+	this.sockets = {};
+	this.data = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.look.start" id="apidoc.element.look.start">
+        function <span class="apidocSignatureSpan">look.</span>start
+        <span class="apidocSignatureSpan">(port, host)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (port, host) {
+	if (cluster.isMaster) {
+		var observer = child_process.fork(__dirname + '/observer', [ port, host ]);
+
+		observer.on('message', function (data) {
+			if (data.cmd === 'init') {
+				observer.send({ cmd: 'init', args: { socket: data.args.socket, transactions: nodetime.transactions } });
+				return;
+			}
+			agent.request(data);
+			clusterhub.emit('request', data);
+		});
+
+		agent.on('request', function (data) {
+			observer.send(data);
+		});
+
+		clusterhub.on('response', function (data) {
+			observer.send(data);
+		});
+
+	} else {
+		agent.on('request', function (data) {
+			clusterhub.emit('response', data);
+		});
+
+		clusterhub.on('request', function (data) {
+			agent.request(data);
+		});
+	}
+
+	agent.on('command', function (data) {
+		switch (data.cmd) {
+			case 'transactions-start' :
+				nodetime.transactions = true;
+				nodetime.resume();
+				break;
+			case 'transactions-stop' :
+				nodetime.pause();
+				nodetime.transactions = false;
+				break;
+		}
+	});
+
+	nodetime.profile({ server: 'localhost', accountKey: 'session', silent: true, transactions: false });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	npm install look
+
+# Usage
+
+The following call should be placed before any other require statement in your application, e.g. at the first line of your main
+module
+
+```js
+require('look').<span class="apidocCodeKeywordSpan">start</span>();
+```
+
+Look will be started as a web server on port `5959`, you can access it by pointing your browser to: `http://[yourhost]:5959`
+
+# Options
+
+- `port` Listening port, defaulting to `5959`
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.look.agent" id="apidoc.module.look.agent">module look.agent</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.look.agent.agent" id="apidoc.element.look.agent.agent">
+        function <span class="apidocSignatureSpan">look.</span>agent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">agent = function () {
+	events.EventEmitter.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.look.agent.super_" id="apidoc.element.look.agent.super_">
+        function <span class="apidocSignatureSpan">look.agent.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.look.agent.prototype" id="apidoc.module.look.agent.prototype">module look.agent.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.look.agent.prototype.request" id="apidoc.element.look.agent.prototype.request">
+        function <span class="apidocSignatureSpan">look.agent.prototype.</span>request
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">request = function (data) {
+	switch (data.cmd) {
+		case 'transactions-start' :
+		case 'transactions-stop' :
+			this.emit('command', data);
+		default :
+			this.emit('message', data);
+			break;
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.look.agent.prototype.send" id="apidoc.element.look.agent.prototype.send">
+        function <span class="apidocSignatureSpan">look.agent.prototype.</span>send
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">send = function (data) {
+	this.emit('request', data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+console.log('Profiler listening on ' + host + ':' + port);
+
+server.listen(port, host);
+
+var receiver = new (require('./receiver'));
+
+receiver.on('request', function (data) {
+	process.<span class="apidocCodeKeywordSpan">send</span>(data);
+});
+
+io.sockets.on('connection', function (socket) {
+	receiver.addSocket(socket);
+});
+
+process.on('message', function (data) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.look.receiver" id="apidoc.module.look.receiver">module look.receiver</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.look.receiver.receiver" id="apidoc.element.look.receiver.receiver">
+        function <span class="apidocSignatureSpan">look.</span>receiver
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">receiver = function () {
+	events.EventEmitter.call(this);
+	this.sockets = {};
+	this.data = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.look.receiver.super_" id="apidoc.element.look.receiver.super_">
+        function <span class="apidocSignatureSpan">look.receiver.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.look.receiver.prototype" id="apidoc.module.look.receiver.prototype">module look.receiver.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.look.receiver.prototype.addSocket" id="apidoc.element.look.receiver.prototype.addSocket">
+        function <span class="apidocSignatureSpan">look.receiver.prototype.</span>addSocket
+        <span class="apidocSignatureSpan">(socket)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addSocket = function (socket) {
+	var that = this;
+
+	this.sockets[socket.id] = socket;
+
+	socket.emit('commands', this.data);
+
+	this.emit('request', { cmd: 'init', args: { socket: socket.id } });
+
+	socket.on('command', function (data) {
+		that.emit('request', data);
+	});
+
+	socket.on('disconnect', function () {
+		socket.removeAllListeners('disconnect');
+		socket.removeAllListeners('message');
+		delete(that.sockets[socket.id]);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var receiver = new (require('./receiver'));
+
+receiver.on('request', function (data) {
+	process.send(data);
+});
+
+io.sockets.on('connection', function (socket) {
+	receiver.<span class="apidocCodeKeywordSpan">addSocket</span>(socket);
+});
+
+process.on('message', function (data) {
+	receiver.send(data);
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.look.receiver.prototype.send" id="apidoc.element.look.receiver.prototype.send">
+        function <span class="apidocSignatureSpan">look.receiver.prototype.</span>send
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">send = function (data) {
+	if (data.cmd === 'init') {
+		this.sockets[data.args.socket].emit('commands', [ data ]);
+		return;
+	}
+	this.data.push(data);
+	if (this.data.length &gt; 512) this.data.shift();
+	for (var id in this.sockets) {
+		this.sockets[id].emit('commands', [ data ]);
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+console.log('Profiler listening on ' + host + ':' + port);
+
+server.listen(port, host);
+
+var receiver = new (require('./receiver'));
+
+receiver.on('request', function (data) {
+	process.<span class="apidocCodeKeywordSpan">send</span>(data);
+});
+
+io.sockets.on('connection', function (socket) {
+	receiver.addSocket(socket);
+});
+
+process.on('message', function (data) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.look.start" id="apidoc.module.look.start">module look.start</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.look.start.start" id="apidoc.element.look.start.start">
+        function <span class="apidocSignatureSpan">look.</span>start
+        <span class="apidocSignatureSpan">(port, host)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (port, host) {
+	if (cluster.isMaster) {
+		var observer = child_process.fork(__dirname + '/observer', [ port, host ]);
+
+		observer.on('message', function (data) {
+			if (data.cmd === 'init') {
+				observer.send({ cmd: 'init', args: { socket: data.args.socket, transactions: nodetime.transactions } });
+				return;
+			}
+			agent.request(data);
+			clusterhub.emit('request', data);
+		});
+
+		agent.on('request', function (data) {
+			observer.send(data);
+		});
+
+		clusterhub.on('response', function (data) {
+			observer.send(data);
+		});
+
+	} else {
+		agent.on('request', function (data) {
+			clusterhub.emit('response', data);
+		});
+
+		clusterhub.on('request', function (data) {
+			agent.request(data);
+		});
+	}
+
+	agent.on('command', function (data) {
+		switch (data.cmd) {
+			case 'transactions-start' :
+				nodetime.transactions = true;
+				nodetime.resume();
+				break;
+			case 'transactions-stop' :
+				nodetime.pause();
+				nodetime.transactions = false;
+				break;
+		}
+	});
+
+	nodetime.profile({ server: 'localhost', accountKey: 'session', silent: true, transactions: false });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	npm install look
+
+# Usage
+
+The following call should be placed before any other require statement in your application, e.g. at the first line of your main
+module
+
+```js
+require('look').<span class="apidocCodeKeywordSpan">start</span>();
+```
+
+Look will be started as a web server on port `5959`, you can access it by pointing your browser to: `http://[yourhost]:5959`
+
+# Options
+
+- `port` Listening port, defaulting to `5959`
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
