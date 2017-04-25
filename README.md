@@ -1,4 +1,7 @@
-# api documentation for  [look (v0.1.3)](https://github.com/baryshev/look#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-look.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-look) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-look.svg)](https://travis-ci.org/npmdoc/node-npmdoc-look)
+# npmdoc-look
+
+#### basic api documentation for  [look (v0.1.3)](https://github.com/baryshev/look#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-look.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-look) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-look.svg)](https://travis-ci.org/npmdoc/node-npmdoc-look)
+
 #### Performance profiler based on nodetime
 
 [![NPM](https://nodei.co/npm/look.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/look)
@@ -70,7 +73,8 @@
         "type": "git",
         "url": "git://github.com/baryshev/look.git"
     },
-    "version": "0.1.3"
+    "version": "0.1.3",
+    "bin": {}
 }
 ```
 
